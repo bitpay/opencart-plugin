@@ -34,9 +34,11 @@ function bpCurl($url, $apiKey, $post = false) {
 	$responseString = curl_exec($curl);
 	
 	if($responseString == false) {
-		$response = curl_error($curl);
+		$response = array('error' => curl_error($curl));
 	} else {
 		$response = json_decode($responseString, true);
+		if (!$response)
+			$response = array('error' => 'invalid json: '.$responseString);
 	}
 	curl_close($curl);
 	return $response;
@@ -121,6 +123,3 @@ function bpGetInvoice($invoiceId, $apiKey=false) {
 	$response['posData'] = json_decode($response['posData'], true);
 	return $response;	
 }
-
-
-?>
