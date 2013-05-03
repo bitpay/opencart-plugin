@@ -36,7 +36,7 @@ class ControllerPaymentBitpay extends Controller {
 	}
 	
 	function log($contents){
-		$file = 'bitpay/log.txt';
+		$file = DIR_APPLICATION.'../bitpay/log.txt';
 		file_put_contents($file, date('m-d H:i:s').": \n", FILE_APPEND);
 		if (is_array($contents))
 			foreach($contents as $k => $v)
@@ -46,7 +46,7 @@ class ControllerPaymentBitpay extends Controller {
 	}
 
     public function send() {
-		require 'bitpay/bp_lib.php';
+		require DIR_APPLICATION.'../bitpay/bp_lib.php';
 		
         $this->load->model('checkout/order');
         $order = $this->model_checkout_order->getOrder($this->session->data['order_id']);
@@ -74,7 +74,7 @@ class ControllerPaymentBitpay extends Controller {
     }
 
     public function callback() {
-		require 'bitpay/bp_lib.php';
+		require DIR_APPLICATION.'../bitpay/bp_lib.php';
 		
 		$apiKey = $this->config->get($this->payment_module_name.'_api_key');
 		$response = bpVerifyNotification($apiKey);
