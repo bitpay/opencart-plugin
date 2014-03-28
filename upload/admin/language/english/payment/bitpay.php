@@ -1,6 +1,6 @@
 <?php
 /*
-©2011 BIT-PAY LLC.
+©2011-2014 BITPAY, INC.
 Permission is hereby granted to any person obtaining a copy of this software
 and associated documentation for use and/or modification in association with
 the bit-pay.com service.
@@ -19,7 +19,7 @@ $_['heading_title']      = 'Bitpay';
 // Text
 $_['text_payment']       = 'Payment';
 $_['text_success']       = 'Success: You have modified the bitpay payment module!';
-$_['text_bitpay'] = '<a onclick="window.open(\'https://www.bit-pay.com/\');"><img src="view/image/payment/bitpay.png" alt="bitpay" title="bitpay" style="border: 0px solid #EEEEEE;" /></a>';
+$_['text_bitpay'] = '<a onclick="window.open(\'https://www.bitpay.com/\');"><img src="view/image/payment/bitpay.png" alt="bitpay" title="bitpay" style="border: 0px solid #EEEEEE;" /></a>';
 $_['text_high']         = 'High';
 $_['text_medium']       = 'Medium';
 $_['text_low']          = 'Low';
