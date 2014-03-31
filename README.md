@@ -66,13 +66,16 @@ Change Log
 ----------
 Version 0.4
   - Added new HTTP header for version tracking
-Verion 0.3
+
+Version 0.3
   - Updated to use API key instead of SSL files.
   - Orders no longer become complete upon receiving a "confirmed" notification from bitpay (only "complete").
+
 Version 0.2
   - Removed the path prefix from the key and cert file locations (the config settings
       must now specify the full paths to these files)
   - Removed unnecessary invoice setting
+
 Version 0.1
   - Initial version, tested against opencart 1.5.1
   - Tested against opencart 1.5.5.1
