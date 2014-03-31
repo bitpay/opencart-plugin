@@ -1,4 +1,5 @@
-©2012 BIT-PAY LLC.
+<strong>©2012-2014 BITPAY, INC.</strong>
+
 Permission is hereby granted to any person obtaining a copy of this software
 and associated documentation for use and/or modification in association with
 the bit-pay.com service.
@@ -11,7 +12,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-Bitcoin payment module using the bit-pay.com service.
+Bitcoin payment module for OpenCart using the bitpay.com service.
 
 Installation
 ------------
@@ -63,6 +64,8 @@ BTC exchange rate for presenting BTC prices to shoppers.
 
 Change Log
 ----------
+Version 0.4
+  - Added new HTTP header for version tracking
 Verion 0.3
   - Updated to use API key instead of SSL files.
   - Orders no longer become complete upon receiving a "confirmed" notification from bitpay (only "complete").
@@ -73,4 +76,3 @@ Version 0.2
 Version 0.1
   - Initial version, tested against opencart 1.5.1
   - Tested against opencart 1.5.5.1
-
