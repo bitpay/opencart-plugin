@@ -2,7 +2,7 @@
 
 Permission is hereby granted to any person obtaining a copy of this software
 and associated documentation for use and/or modification in association with
-the bit-pay.com service.
+the bitpay.com service.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
@@ -36,7 +36,7 @@ Configuration
 7. Select a transaction speed.  The high speed will send a confirmation as soon
     as a transaction is received in the bitcoin network (usually a few seconds).  A
     medium speed setting will typically take 10 minutes.  The low speed setting
-    usually takes around 1 hour.  See the bit-pay.com merchant documentation for a 
+    usually takes around 1 hour.  See the bitpay.com merchant documentation for a 
     full description of the transaction speed settings.
 8. Set the status to enabled (this activates the bitpay payment extension and 
     enabled shoppers to select the bitcoin payment method).
@@ -48,15 +48,15 @@ Usage
 When a shopping chooses the Bitcoin payment method, they will be presented with an
 order summary as the next step (prices are shown in whatever currency they've selected
 for shopping).  They will be presented with a button called "Pay with Bitcoin."  This
-button takes the shopper to a bit-pay.com invoice where the user is presented with
+button takes the shopper to a bitpay.com invoice where the user is presented with
 bitcoin payment instructions.  Once payment is received, a link is presented to the 
 shopper that will take them back to the order summary.
 
 You can add BTC as a currency to your opencart installation.  This will allow shoppers
 to view prices in BTC and when they checkout, the final price will be transmitted to
-bit-pay.com in BTC.  The exact BTC amount transmitted is what will be requested of the 
-shopper.  If the final price is expressed in another currency, then bit-pay.com will
-convert that rate to a BTC total based on current exchanges rates (if bit-pay.com
+bitpay.com in BTC.  The exact BTC amount transmitted is what will be requested of the 
+shopper.  If the final price is expressed in another currency, then bitpay.com will
+convert that rate to a BTC total based on current exchanges rates (if bitpay.com
 supports that currency).  
 
 Note: This extension does not provide a means of automatically pulling a current
