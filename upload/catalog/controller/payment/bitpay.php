@@ -36,13 +36,7 @@ class ControllerPaymentBitpay extends Controller {
 	}
 	
 	function log($contents){
-		$file = DIR_APPLICATION.'../bitpay/log.txt';
-		file_put_contents($file, date('m-d H:i:s').": \n", FILE_APPEND);
-		if (is_array($contents))
-			foreach($contents as $k => $v)
-				file_put_contents($file, $k.': '.$v."\n", FILE_APPEND);
-		else
-			file_put_contents($file, $contents."\n", FILE_APPEND);
+		error_log($contents);
 	}
 
     public function send() {
