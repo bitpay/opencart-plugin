@@ -1,19 +1,3 @@
-<strong>©2012-2014 BITPAY, INC.</strong>
-
-Permission is hereby granted to any person obtaining a copy of this software
-and associated documentation for use and/or modification in association with
-the bitpay.com service.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-
-Bitcoin payment module for OpenCart using the bitpay.com service.
-
 Installation
 ------------
 Copy these files into your OpenCart directory.
@@ -62,20 +46,26 @@ supports that currency).
 Note: This extension does not provide a means of automatically pulling a current
 BTC exchange rate for presenting BTC prices to shoppers.
 
-Change Log
-----------
-Version 0.4
-  - Added new HTTP header for version tracking
+# License
 
-Version 0.3
-  - Updated to use API key instead of SSL files.
-  - Orders no longer become complete upon receiving a "confirmed" notification from bitpay (only "complete").
+The MIT License (MIT)
 
-Version 0.2
-  - Removed the path prefix from the key and cert file locations (the config settings
-      must now specify the full paths to these files)
-  - Removed unnecessary invoice setting
+Copyright (c) 2011-2014 BitPay LLC
 
-Version 0.1
-  - Initial version, tested against opencart 1.5.1
-  - Tested against opencart 1.5.5.1
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
