@@ -24,5 +24,5 @@
  */
 
 // Text
-$_['text_title'] = 'Bitcoin';
-$_['button_bitpay_confirm'] 		= 'Pay with Bitcoin';
+$_['text_title']            = 'Bitcoin';
+$_['button_bitpay_confirm'] = 'Pay with Bitcoin';
