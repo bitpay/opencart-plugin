@@ -32,7 +32,7 @@ $('#button-confirm').bind('click', function() {
 	$.ajax({ 
 		type: 'GET',
 		url: 'index.php?route=payment/bitpay/send',
-    timeout: 5000,
+    timeout: (1000 * 45), // 45 seconds
     error: function() {
       alert('Error communicating with payment provider.');
     },

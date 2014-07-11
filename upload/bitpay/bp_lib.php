@@ -112,16 +112,18 @@ function bpCreateInvoice($orderId, $price, $posData, $options = array())
 	global $bpOptions;	
 	
 	$options = array_merge($bpOptions, $options);	// $options override any options found in bp_options.php
+    $pos     = array('posData' => $posData);
 	
-	$options['posData'] = '{"posData": "' . $posData . '"';
 	if ($bpOptions['verifyPos']) // if desired, a hash of the POS data is included to verify source in the callback
     {
-		$options['posData'].= ', "hash": "' . crypt($posData, $options['apiKey']).'"';
+        $pos['hash'] = crypt(serialize($posData), $options['apiKey']);
     }
-	$options['posData'] .= '}';
+
+    $options['posData'] = json_encode($pos);
 	$options['orderID']  = $orderId;
 	$options['price']    = $price;
 	
+    $post        = array();
 	$postOptions = array('orderID', 'itemDesc', 'itemCode', 'notificationEmail', 'notificationURL', 'redirectURL', 
 		'posData', 'price', 'currency', 'physical', 'fullNotifications', 'transactionSpeed', 'buyerName', 
 		'buyerAddress1', 'buyerAddress2', 'buyerCity', 'buyerState', 'buyerZip', 'buyerEmail', 'buyerPhone');
