@@ -1,9 +1,12 @@
-Installation
-------------
+bitpay/opencart-plugin
+======================
+
+# Installation
+
 Copy these files into your OpenCart directory.
 
-Configuration
--------------
+# Configuration
+
 1. Create an API key at bitpay.com under the "My Account" section.
 2. In the opencart administration under Extensions->Payments, click the "Install"
    link on the Bitpay row.
@@ -27,8 +30,8 @@ Configuration
 9. Select a sort order.  The sort order determines the ordering of payment options
     presented to the shopper.
 
-Usage
------
+# Usage
+
 When a shopping chooses the Bitcoin payment method, they will be presented with an
 order summary as the next step (prices are shown in whatever currency they've selected
 for shopping).  They will be presented with a button called "Pay with Bitcoin."  This
@@ -46,11 +49,30 @@ supports that currency).
 Note: This extension does not provide a means of automatically pulling a current
 BTC exchange rate for presenting BTC prices to shoppers.
 
+# Support
+
+## BitPay Support
+
+* [Github Issues](https://github.com/bitpay/opencart-plugin/issues)
+  * Open an Issue if you are having issues with this plugin
+* [Support](https://support.bitpay.com/)
+  * Checkout the BitPay support site
+
+## OpenCart Support
+
+* [Homepage](http://www.opencart.com/)
+* [Documentation](http://docs.opencart.com/)
+* [Forums](http://forum.opencart.com/)
+
+# Contribute
+
+To contribute to this project, please fork and submit a pull request.
+
 # License
 
 The MIT License (MIT)
 
-Copyright (c) 2011-2014 BitPay LLC
+Copyright (c) 2011-2014 BitPay
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
