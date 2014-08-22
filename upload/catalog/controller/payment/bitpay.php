@@ -81,14 +81,15 @@ class ControllerPaymentBitpay extends Controller
             'currency'          => $order['currency_code'],
             'physical'          => 'true',
             'fullNotifications' => 'true',
-            'transactionSpeed'  => $this->config->get($this->payment_module_name.'_transaction_speed')
+            'transactionSpeed'  => $this->config->get($this->payment_module_name.'_transaction_speed'),
+            'testMode'          => $this->config->get($this->payment_module_name.'_test_mode')
         );
         $response = bpCreateInvoice($order['order_id'], $price, $posData, $options);
 		
         if(array_key_exists('error', $response))
         {
             $this->log("communication error");
-			$this->log($response['error']);
+			$this->log(var_export($response['error'], true));
             echo "{\"error\": \"Error: Problem communicating with payment provider.\\nPlease try again later.\"}";
         }
         else

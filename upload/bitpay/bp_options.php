@@ -67,4 +67,7 @@ $bpOptions['fullNotifications'] = 'true';
 // transaction speed: low/medium/high.   See API docs for more details.
 $bpOptions['transactionSpeed'] = 'low'; 
 
+// If set to true, then the test.bitpay/api is used
+$bpOptions['testMode'] = false; 
+
 ?>
