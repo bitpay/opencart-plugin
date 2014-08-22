@@ -96,6 +96,7 @@ class ControllerPaymentBitpay extends Controller
         $this->data['entry_confirmed_status']  = $this->language->get('entry_confirmed_status');
         $this->data['entry_invalid_status']    = $this->language->get('entry_invalid_status');
         $this->data['entry_transaction_speed'] = $this->language->get('entry_transaction_speed');
+        $this->data['entry_test_mode']         = $this->language->get('entry_test_mode');
         $this->data['entry_status']            = $this->language->get('entry_status');
         $this->data['entry_sort_order']        = $this->language->get('entry_sort_order');
         $this->data['button_save']             = $this->language->get('button_save');
@@ -170,6 +171,15 @@ class ControllerPaymentBitpay extends Controller
         else
         {
             $this->data[$this->payment_module_name.'_transaction_speed'] = $this->config->get($this->payment_module_name.'_transaction_speed'); 
+        } 
+
+        if (isset($this->request->post[$this->payment_module_name.'_test_mode']))
+        {
+            $this->data[$this->payment_module_name.'_test_mode'] = $this->request->post[$this->payment_module_name.'_test_mode'];
+        }
+        else
+        {
+            $this->data[$this->payment_module_name.'_test_mode'] = $this->config->get($this->payment_module_name.'_test_mode'); 
         } 
 
         if (isset($this->request->post[$this->payment_module_name.'_status']))

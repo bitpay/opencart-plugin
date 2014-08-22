@@ -38,6 +38,7 @@ $_['entry_api_key']           = 'API Key:';
 $_['entry_confirmed_status']  = 'Confirmed Status:';
 $_['entry_invalid_status']    = 'Invalid Status:';
 $_['entry_transaction_speed'] = 'Transaction Speed:';
+$_['entry_test_mode']		  = 'Test Mode:';
 $_['entry_status']            = 'Status:';
 $_['entry_sort_order']        = 'Sort Order:';
 

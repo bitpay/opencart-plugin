@@ -95,6 +95,18 @@
                 <?php } ?>
               </select></td>
           </tr>
+          <tr>
+            <td><?php echo $entry_test_mode; ?></td>
+            <td><select name="bitpay_test_mode"> 
+                <?php if ($bitpay_test_mode) { ?>
+                <option value="1" selected="selected"><?php echo $text_enabled; ?></option>
+                <option value="0"><?php echo $text_disabled; ?></option>
+                <?php } else { ?>
+                <option value="1"><?php echo $text_enabled; ?></option>
+                <option value="0" selected="selected"><?php echo $text_disabled; ?></option>
+                <?php } ?>
+              </select></td>
+          </tr>
         <tr>
           <td><?php echo $entry_status; ?></td>
           <td><select name="bitpay_status"> 
