@@ -174,7 +174,7 @@ function bpVerifyNotification($apiKey = false)
     }
 		
 	$posData = json_decode($json['posData'], true);
-	if($bpOptions['verifyPos'] and $posData['hash'] != crypt($posData['posData'], $apiKey)) 
+	if($bpOptions['verifyPos'] && $posData['hash'] != crypt(serialize($posData['posData']), $apiKey)) 
     {
 		return 'authentication failed (bad hash)';
     }
