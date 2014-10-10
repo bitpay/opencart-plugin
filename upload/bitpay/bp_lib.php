@@ -180,8 +180,12 @@ function bpVerifyNotification($apiKey = false)
     }
 	$json['posData'] = $posData['posData'];
 
-	return $json;
-}
+	if (!array_key_exists('id', $json))
+    {
+        return 'Cannot find invoice ID';
+    }
+
+    return bpGetInvoice($json['id'], $apiKey);
 
 /**
  * $options can include ('apiKey')
@@ -205,6 +209,10 @@ function bpGetInvoice($invoiceId, $apiKey=false)
 		return $response; // error
     }
 	$response['posData'] = json_decode($response['posData'], true);
+    if($bpOptions['verifyPos'])
+    {
+        $response['posData'] = $response['posData']['posData'];
+    }
 
 	return $response;
 }
