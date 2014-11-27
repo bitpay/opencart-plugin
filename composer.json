@@ -1,14 +1,15 @@
 {
-    "name": "bitpay/opencart-plugin",
-    "description": "BitPay opencart plugin",
+    "name": "bitpay/opencart-bitpay",
+    "description": "BitPay OpenCart Plugin",
+    "version": "1.9.2",
     "type": "opencart-extension",
     "license": "MIT",
-    "homepage": "https://github.com/bitpay/opencart-plugin",
+    "homepage": "https://github.com/bitpay/opencart-bitpay",
     "minimum-stability": "stable",
     "support": {
-        "email": "support@bitpay.com",
-        "issues": "https://github.com/bitpay/opencart-plugin/issues",
-        "source": "https://github.com/bitpay/opencart-plugin"
+        "email": "integrations@bitpay.com",
+        "issues": "https://github.com/bitpay/opencart-bitpay/issues",
+        "source": "https://github.com/bitpay/opencart-bitpay"
     },
     "require": {},
     "require-dev": {
