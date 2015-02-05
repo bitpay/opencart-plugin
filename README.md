@@ -1,6 +1,8 @@
 bitpay/opencart-bitpay
 ======================
 
+[![Join the chat at https://gitter.im/bitpay/opencart-plugin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bitpay/opencart-plugin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 # Installation
 
 Copy the files from `upload` to your OpenCart installation directory.
