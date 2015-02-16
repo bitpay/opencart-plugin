@@ -5,9 +5,6 @@
 [![Build Status](https://img.shields.io/travis/bitpay/opencart-plugin/master.svg?style=flat-square)](https://travis-ci.org/bitpay/opencart-plugin)
 [![Join the chat at https://gitter.im/bitpay/opencart-plugin](http://sambohler.github.io/gitter.svg)](https://gitter.im/bitpay/opencart-plugin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
-
 ## Installation
 
 Follow the instructions found in the [BitPay for OpenCart Guide](GUIDE.md)
