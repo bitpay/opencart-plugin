@@ -1,29 +1,64 @@
-bitpay/opencart-bitpay
-======================
+# BitPay for OpenCart
 
-[![Join the chat at https://gitter.im/bitpay/opencart-plugin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/bitpay/opencart-plugin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Latest Version](https://img.shields.io/github/release/bitpay/opencart-plugin.svg?style=flat-square)](https://github.com/bitpay/opencart-plugin/releases)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
+[![Build Status](https://img.shields.io/travis/bitpay/opencart-plugin/master.svg?style=flat-square)](https://travis-ci.org/bitpay/opencart-plugin)
+[![Join the chat at https://gitter.im/bitpay/opencart-plugin](http://sambohler.github.io/gitter.svg)](https://gitter.im/bitpay/opencart-plugin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-# Installation
+This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
+PSRs you support to avoid any confusion with users and contributors.
 
-Copy the files from `upload` to your OpenCart installation directory.
+## Installation
 
-# Upgrade
+Follow the instructions found in the [BitPay for OpenCart Guide](GUIDE.md)
 
-If you are upgrading from an earlier version of BitPay's OpenCart plugin, you'll need to remove the `bitpay` folder from your OpenCart installation directory, then proceed with the installation instructions above.
+## Development Setup
 
-# Configuration
+``` bash
+# Clone the repo
+$ git clone https://github.com/bitpay/opencart-plugin.git
+$ cd ./opencart-plugin
 
-1. Create an API key at bitpay.com under the "My Account" section.
-2. In the opencart administration under Extensions->Payments, click the "Install"
-   link on the Bitpay row.
-3. Also under Extensions->Payments, click the "Edit" link on the Bitpay row.
-4. Set the API key to the key you created in step 1.  
-5. Select a transaction speed.  The high speed will send a confirmation as soon
-    as a transaction is received in the bitcoin network (usually a few seconds).  A
-    medium speed setting will typically take 10 minutes.  The low speed setting
-    usually takes around 1 hour.  See the bitpay.com merchant documentation for a 
-    full description of the transaction speed settings.
-6. Set the status to enabled (this activates the bitpay payment extension and 
-    enabled shoppers to select the bitcoin payment method).
-7. Select a sort order.  The sort order determines the ordering of payment options
-    presented to the shopper.
+# Install dependencies via Composer
+$ composer install
+
+# Set Environment Variables (variables needed can be found in .env.sample)
+$ cp .env.sample .env
+
+# After modifying the Environment Variables for your environment setup OpenCart
+$ ./bin/robo setup
+```
+
+## Development Workflow
+
+``` bash
+# Run PHP Server of OpenCart installation and redirect bash I/O
+$ ./bin/robo server &
+
+# Watch for source code changes and copy them to the OpenCart installation
+$ ./bin/robo watch
+```
+
+## Testing
+
+``` bash
+$ ./bin/robo test
+```
+
+## Build
+
+``` bash
+$ ./bin/robo build
+
+# Outputs:
+# ./build/bitpay-opencart - the distribution files
+# ./build/bitpay-opencart.ocmod.zip - the distribution archive
+```
+
+## Contributing
+
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+
+## License
+
+The MIT License (MIT). Please see [License File](LICENSE.md) for more information.

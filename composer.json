@@ -1,28 +1,53 @@
 {
-    "name": "bitpay/opencart-bitpay",
-    "description": "BitPay OpenCart Plugin",
-    "version": "1.9.2",
+    "name": "bitpay/opencart-plugin",
+    "description": "BitPay Payment Method for OpenCart",
+    "version": "0.0.1",
     "type": "opencart-extension",
+    "keywords": ["bitcoin", "bitpay", "opencart", "payment", "btc", "xbt"],
+    "homepage": "https://github.com/bitpay/opencart-plugin",
     "license": "MIT",
-    "homepage": "https://github.com/bitpay/opencart-bitpay",
-    "minimum-stability": "stable",
+    "authors": [
+        {
+            "name": "BitPay, Inc.",
+            "homepage": "https://bitpay.com"
+        }
+    ],
     "support": {
-        "email": "integrations@bitpay.com",
-        "issues": "https://github.com/bitpay/opencart-bitpay/issues",
-        "source": "https://github.com/bitpay/opencart-bitpay"
+            "email": "support@bitpay.com",
+            "issues": "https://github.com/bitpay/opencart-plugin/issues"
+        },
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "opencart/opencart",
+                "version": "2.0.0.0",
+                "dist": {
+                    "url": "https://github.com/opencart/opencart/archive/2.0.0.0.zip",
+                    "type": "zip"
+                },
+                "source": {
+                    "url": "https://github.com/opencart/opencart",
+                    "type": "git",
+                    "reference": "7911c76c43e29ddc1e4168f36dff6a0be6179719"
+                }
+            }
+        }
+    ],
+    "require": {
+        "php" : ">=5.4.0",
+        "bitpay/php-client": "2.0.*@dev"
     },
-    "require": {},
     "require-dev": {
-        "phpmd/phpmd": "*",
-        "phpdocumentor/phpdocumentor": "*",
-        "phing/phing": "*",
-        "pdepend/pdepend" : "1.1.0",
-        "squizlabs/php_codesniffer": "*",
-        "phpunit/phpunit": "*",
-        "phploc/phploc": "*",
-        "phpunit/phpunit-skeleton-generator": "*"
+        "phpunit/phpunit" : "4.*",
+        "squizlabs/php_codesniffer": "2.*",
+        "codegyre/robo": "*",
+        "opencart/opencart" : "2.0.0.0",
+        "vlucas/phpdotenv": "~1.1.0"
     },
+    "minimum-stability": "stable",
     "config": {
-        "bin-dir": "bin"
+        "bin-dir": "bin/",
+        "preferred-install": "source"
     }
 }
