@@ -76,7 +76,7 @@ class BitpayLibrary {
 		$this->setting('connection', 'connecting');
 		$this->setting('token', $token->getToken());
 
-		$network = $this->getNetwork($network_slug);
+		$network = $this->getNetwork();
 		if (443 === $network->getApiPort()) {
 			return 'https://' . $network->getApiHost() . '/api-access-request?pairingCode=' . $token->getPairingCode();
 		} else {
@@ -421,9 +421,9 @@ class BitpayLibrary {
 		// Set the setting
 		if (func_num_args() === 2) {
 			if (!is_array($value)) {
-				$this->db->query("UPDATE " . DB_PREFIX . "setting SET `value` = '" . $this->db->escape($value) . "', serialized = '0' WHERE `group` = 'bitpay' AND `key` = '" . $this->db->escape($key) . "' AND store_id = '0'");
+				$this->db->query("UPDATE " . DB_PREFIX . "setting SET `value` = '" . $this->db->escape($value) . "', serialized = '0' WHERE `code` = 'bitpay' AND `key` = '" . $this->db->escape($key) . "' AND store_id = '0'");
 			} else {
-				$this->db->query("UPDATE " . DB_PREFIX . "setting SET `value` = '" . $this->db->escape(serialize($value)) . "', serialized = '1' WHERE `group` = 'bitpay' AND `key` = '" . $this->db->escape($key) . "' AND store_id = '0'");
+				$this->db->query("UPDATE " . DB_PREFIX . "setting SET `value` = '" . $this->db->escape(serialize($value)) . "', serialized = '1' code `group` = 'bitpay' AND `key` = '" . $this->db->escape($key) . "' AND store_id = '0'");
 			}
 			return $this->config->set($key, $value);
 		}
