@@ -2,19 +2,14 @@
 
 All Notable changes to `opencart-plugin` will be documented in this file
 
-## NEXT - YYYY-MM-DD
+## [Unreleased][unreleased]
 
+## [2.0.0] - 2015-02-24
 ### Added
-- Nothing
+- Improved method to connect extension with BitPay's API
+- Syntax highlighting for log
+- Support tab with links and the ability to send a Support Request right from the extension
 
-### Deprecated
-- Nothing
-
-### Fixed
-- Nothing
-
-### Removed
-- Nothing
-
-### Security
-- Nothing
+### Changed
+- Additional logging for use with the Debug Logging option
+- Support for OpenCart 2.0.1.x
