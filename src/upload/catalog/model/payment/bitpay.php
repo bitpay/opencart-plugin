@@ -31,7 +31,7 @@ class ModelPaymentBitpay extends Model {
 			return;
 		}
 
-		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "zone_to_geo_zone WHERE geo_zone_id = '" . (int)$this->config->get('cod_geo_zone_id') . "' AND country_id = '" . (int)$address['country_id'] . "' AND (zone_id = '" . (int)$address['zone_id'] . "' OR zone_id = '0')");
+		$query = $this->db->query("SELECT * FROM " . DB_PREFIX . "zone_to_geo_zone WHERE geo_zone_id = '" . (int)$this->bitpay->setting('geo_zone_id') . "' AND country_id = '" . (int)$address['country_id'] . "' AND (zone_id = '" . (int)$address['zone_id'] . "' OR zone_id = '0')");
 
 		// All Geo Zones configured or address is in configured Geo Zone
 		if (!$this->config->get('bitpay_geo_zone_id') || $query->num_rows) {
@@ -39,7 +39,7 @@ class ModelPaymentBitpay extends Model {
 				'code'	   => 'bitpay',
 				'title'	  => $this->language->get('text_title'),
 				'terms'	  => '',
-				'sort_order' => $this->config->get('cod_sort_order')
+				'sort_order' => $this->bitpay->setting('sort_order')
 			);
 		}
 	}
