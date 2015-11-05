@@ -251,7 +251,7 @@ class ControllerPaymentBitpay extends Controller {
 		}
 
 		if (!array_key_exists('id', $json)) {
-			$this->log('warn' . 'IPN handler called with invalid data');
+			$this->log('warn', 'IPN handler called with invalid data');
 			$this->log('trace', 'Invoice object missing ID field: ' . $var_export($json, true));
 			return;
 		}
