@@ -31,7 +31,7 @@ class BitpayLibrary {
 		} else {
 			// OpenCart uses a custom error handler for reporting instead of using exceptions
 			// Which is why an error is triggered instead of an exception being thrown
-			trigger_error($this->get->language('log_error_install'), E_USER_ERROR);
+			trigger_error($this->language->get('log_error_install'), E_USER_ERROR);
 		}
 
 		// Setup logging
