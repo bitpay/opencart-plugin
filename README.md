@@ -6,10 +6,10 @@ If you are interested in becoming a maintainer of this project, please contact u
 
 # BitPay for OpenCart
 
-[![Latest Version](https://img.shields.io/github/release/bitpay/opencart-plugin.svg?style=flat-square)](https://github.com/bitpay/opencart-plugin/releases)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/bitpay/opencart-plugin/master.svg?style=flat-square)](https://travis-ci.org/bitpay/opencart-plugin)
-[![Join the chat at https://gitter.im/bitpay/opencart-plugin](http://sambohler.github.io/gitter.svg)](https://gitter.im/bitpay/opencart-plugin?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+## Last Cart Version Tested: 2.0.1.1
 
 ## Installation
 
