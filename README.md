@@ -62,6 +62,23 @@ $ ./bin/robo build
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
+## Support
+
+**BitPay Support:**
+
+* Last Cart Version Tested: 1.9.0.1
+* [GitHub Issues](https://github.com/bitpay/magento-plugin/issues)
+  * Open an issue if you are having issues with this plugin.
+* [Support](https://help.bitpay.com)
+  * BitPay merchant support documentation
+
+**OpenCart Support:**
+
+* [Homepage](http://www.opencart.com)
+* [GitHub Issues](https://github.com/opencart/opencart/issues)
+* [Support](http://www.opencart.com/index.php?route=support/support)
+* [Forums](http://forum.opencart.com)
+
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
