@@ -33,7 +33,3 @@ Configure the settings that work best for you.  Each setting has a tooltip that 
 Set the status setting to enabled and click save at the top right of the page.
 
 You're done!
-
-## Support
-
-If you run into any issues after installing the plugin, there is a support tab on the BitPay plugin's configuration screen with a link to [Opencart's lab on BitPay Labs](http://bitpaylabs.com/c/plugins/opencart) and a form to submit a Support Request to [BitPay Support](https://support.bitpay.com).
