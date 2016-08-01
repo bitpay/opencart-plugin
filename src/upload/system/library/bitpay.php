@@ -3,7 +3,7 @@
 /**
  * BitPay Library for OpenCart
  */
-class BitpayLibrary {
+class Bitpay {
 
 	/** @var int $version */
 	public $version = '2.0.0';
@@ -40,7 +40,8 @@ class BitpayLibrary {
 		// Setup encryption
 		$this->load->library('encryption');
 		$fingerprint = substr(sha1(sha1(__DIR__)), 0, 24);
-		$this->encryption = new Encryption($fingerprint);
+		$this->encryption = new Encryption();
+                $this->encryption->setFingerprint($fingerprint);
 	}
 
 	/**
