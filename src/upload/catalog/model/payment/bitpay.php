@@ -14,7 +14,6 @@ class ModelPaymentBitpay extends Model {
 	public function __construct($registry) {
 		parent::__construct($registry);
 		$this->load->language('payment/bitpay');
-		$this->load->library('bitpay');
 		$this->bitpay = new Bitpay($registry);
 	}
 

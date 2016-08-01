@@ -36,7 +36,7 @@
     ],
     "require": {
         "php" : ">=5.4.0",
-        "bitpay/php-client": "2.0.*@dev"
+        "bitpay/php-client": "dev-master#9338b27fbc7919e3df32caacf0591525c74c58b8"
     },
     "require-dev": {
         "phpunit/phpunit" : "4.*",

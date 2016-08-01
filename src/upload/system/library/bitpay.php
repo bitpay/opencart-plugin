@@ -38,10 +38,8 @@ class Bitpay {
 		$this->logger = new Log('bitpay.log');
 
 		// Setup encryption
-		$this->load->library('encryption');
 		$fingerprint = substr(sha1(sha1(__DIR__)), 0, 24);
-		$this->encryption = new Encryption();
-                $this->encryption->setFingerprint($fingerprint);
+		$this->encryption = new Encryption($fingerprint);
 	}
 
 	/**
@@ -303,7 +301,6 @@ class Bitpay {
 	 * @return void
 	 */
 	public function sendSupportRequest() {
-		$this->load->library('mail');
 
 		$mail = new Mail(array(
 			'protocol' => $this->config->get('config_mail')['protocol'],

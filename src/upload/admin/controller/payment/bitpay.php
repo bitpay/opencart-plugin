@@ -23,7 +23,6 @@ class ControllerPaymentBitpay extends Controller {
 		// Make langauge strings and BitPay Library available to all
 		$this->load->language('payment/bitpay');
 
-		$this->load->library('bitpay');
 		$this->bitpay = new Bitpay($registry);
 
 		// Setup logging
