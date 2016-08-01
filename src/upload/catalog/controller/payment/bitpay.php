@@ -54,7 +54,7 @@ class ControllerPaymentBitpay extends Controller {
 		}
 
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/bitpay.tpl')) {
-			return $this->load->view($this->config->get('config_template') . '/payment/bitpay.tpl', $data);
+			return $this->load->view($this->config->get('config_template') . '/template/payment/bitpay.tpl', $data);
 		} else {
 			return $this->load->view('/payment/bitpay.tpl', $data);
 		}
