@@ -22,8 +22,8 @@ class ControllerPaymentBitpay extends Controller {
 
 		// Make langauge strings and BitPay Library available to all
 		$this->load->language('payment/bitpay');
-		$this->load->library('bitpay');
-		$this->bitpay = new BitpayLibrary($registry);
+
+		$this->bitpay = new Bitpay($registry);
 
 		// Setup logging
 		$this->logger = new Log('bitpay.log');
@@ -539,6 +539,7 @@ class ControllerPaymentBitpay extends Controller {
 	 * @return void
 	 */
 	public function uninstall() {
+		$this->load->model('setting/setting');
 		$this->model_setting_setting->deleteSetting('bitpay');
 	}
 }

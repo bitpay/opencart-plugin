@@ -19,8 +19,7 @@ class ControllerPaymentBitpay extends Controller {
 
 		// Make langauge strings and BitPay Library available to all
 		$this->load->language('payment/bitpay');
-		$this->load->library('bitpay');
-		$this->bitpay = new BitpayLibrary($registry);
+		$this->bitpay = new Bitpay($registry);
 
 		// Setup logging
 		$this->logger = new Log('bitpay.log');
@@ -57,7 +56,7 @@ class ControllerPaymentBitpay extends Controller {
 		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/bitpay.tpl')) {
 			return $this->load->view($this->config->get('config_template') . '/template/payment/bitpay.tpl', $data);
 		} else {
-			return $this->load->view('default/template/payment/bitpay.tpl', $data);
+			return $this->load->view('/payment/bitpay.tpl', $data);
 		}
 	}
 

@@ -3,7 +3,7 @@
 /**
  * BitPay Library for OpenCart
  */
-class BitpayLibrary {
+class Bitpay {
 
 	/** @var int $version */
 	public $version = '2.0.0';
@@ -38,7 +38,6 @@ class BitpayLibrary {
 		$this->logger = new Log('bitpay.log');
 
 		// Setup encryption
-		$this->load->library('encryption');
 		$fingerprint = substr(sha1(sha1(__DIR__)), 0, 24);
 		$this->encryption = new Encryption($fingerprint);
 	}
@@ -302,7 +301,6 @@ class BitpayLibrary {
 	 * @return void
 	 */
 	public function sendSupportRequest() {
-		$this->load->library('mail');
 
 		$mail = new Mail(array(
 			'protocol' => $this->config->get('config_mail')['protocol'],
