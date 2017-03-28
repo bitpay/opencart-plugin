@@ -58,6 +58,23 @@ $ ./bin/robo build
 # ./build/bitpay-opencart.ocmod.zip - the distribution archive
 ```
 
+## Support
+
+**BitPay Support:**
+
+* Last Version Tested: 3.5.x
+* [Github Issues](https://github.com/bitpay/wpmembership-plugin/issues)
+  * Open an Issue if you are having issues with this plugin
+* [Support](https://help.bitpay.com)
+  * Checkout the BitPay support site
+
+**OpenCart Support:**
+
+* [Homepage](http://www.opencart.com)
+* [GitHub Issues](https://github.com/opencart/opencart/issues)
+* [Support](http://www.opencart.com/index.php?route=support/support)
+* [Forums](http://forum.opencart.com)
+
 ## Contributing
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
