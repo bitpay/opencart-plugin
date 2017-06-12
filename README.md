@@ -9,7 +9,7 @@ If you are interested in becoming a maintainer of this project, please contact u
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/bitpay/opencart-plugin/master.svg?style=flat-square)](https://travis-ci.org/bitpay/opencart-plugin)
 
-## Last Cart Version Tested: 2.0.1.1
+## Last Cart Version Tested: 2.3.0.2
 
 ## Installation
 
@@ -66,7 +66,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 **BitPay Support:**
 
-* Last Cart Version Tested: 1.9.0.1
+* Last Cart Version Tested: 2.3.0.2
 * [GitHub Issues](https://github.com/bitpay/magento-plugin/issues)
   * Open an issue if you are having issues with this plugin.
 * [Support](https://help.bitpay.com)
