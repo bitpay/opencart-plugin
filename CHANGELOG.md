@@ -2,7 +2,9 @@
 
 All Notable changes to `opencart-plugin` will be documented in this file
 
-## [Unreleased][unreleased]
+## [2.1.0] - 2017-06-12
+### Added
+- support for 2.3 version of OpenCart
 
 ## [2.0.1] - 2016-08-01
 ### Added
