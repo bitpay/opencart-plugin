@@ -2,7 +2,7 @@
 /**
  * BitPay Payment Controller
  */
-class ControllerPaymentBitpay extends Controller {
+class ControllerExtensionPaymentBitpay extends Controller {
 
 	/** @var boolean $ajax Whether the request was made via AJAX */
 	private $ajax = false;
@@ -18,7 +18,7 @@ class ControllerPaymentBitpay extends Controller {
 		parent::__construct($registry);
 
 		// Make langauge strings and BitPay Library available to all
-		$this->load->language('payment/bitpay');
+		$this->load->language('extension/payment/bitpay');
 		$this->bitpay = new Bitpay($registry);
 
 		// Setup logging
@@ -46,17 +46,17 @@ class ControllerPaymentBitpay extends Controller {
 	public function index() {
 		$data['testnet'] = ($this->setting('network') === 'livenet') ? false : true;
 		$data['warning_testnet'] = $this->language->get('warning_testnet');
-		$data['url_redirect'] = $this->url->link('payment/bitpay/confirm', $this->config->get('config_secure'));
+		$data['url_redirect'] = $this->url->link('extension/payment/bitpay/confirm', $this->config->get('config_secure'));
 		$data['button_confirm'] = $this->language->get('button_confirm');
 
 		if (isset($this->session->data['error_bitpay'])) {
 			unset($this->session->data['error_bitpay']);
 		}
 
-		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/payment/bitpay.tpl')) {
-			return $this->load->view($this->config->get('config_template') . '/template/payment/bitpay.tpl', $data);
+		if (file_exists(DIR_TEMPLATE . $this->config->get('config_template') . '/template/extension/payment/bitpay.tpl')) {
+			return $this->load->view($this->config->get('config_template') . '/template/extension/payment/bitpay.tpl', $data);
 		} else {
-			return $this->load->view('/payment/bitpay.tpl', $data);
+			return $this->load->view('extension/payment/bitpay.tpl', $data);
 		}
 	}
 
@@ -147,7 +147,10 @@ class ControllerPaymentBitpay extends Controller {
 			$this->log('error', 'Cannot prepare invoice without `total`');
 			throw Exception('Cannot prepare invoice without `total`');
 		}
-		$invoice->setPrice((float)$order_info['total']);
+                
+                (float)$foo = $order_info['total']*$order_info['currency_value'];
+                $total = (float)number_format((float)$foo, 2, '.', ''); 
+		$invoice->setPrice($total);
 
 		// Send Buyer Information?
 		if ($this->setting('send_buyer_info')) {
@@ -168,12 +171,12 @@ class ControllerPaymentBitpay extends Controller {
 
 		$return_url = $this->setting('return_url');
 		if (empty($return_url)) {
-			$return_url = $this->url->link('payment/bitpay/success', $this->config->get('config_secure'));
+			$return_url = $this->url->link('extension/payment/bitpay/success', $this->config->get('config_secure'));
 		}
 
 		$notify_url = $this->setting('notify_url');
 		if (empty($notify_url)) {
-			$notify_url = $this->url->link('payment/bitpay/callback', $this->config->get('config_secure'));
+			$notify_url = $this->url->link('extension/payment/bitpay/callback', $this->config->get('config_secure'));
 		}
 
 		$invoice->setRedirectUrl($return_url);

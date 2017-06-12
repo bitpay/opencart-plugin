@@ -2,7 +2,7 @@
 /**
  * BitPay Payment Model
  */
-class ModelPaymentBitpay extends Model {
+class ModelExtensionPaymentBitpay extends Model {
 
 	/** @var BitPayLibrary $bitpay */
 	private $bitpay;
@@ -13,7 +13,7 @@ class ModelPaymentBitpay extends Model {
 	 */
 	public function __construct($registry) {
 		parent::__construct($registry);
-		$this->load->language('payment/bitpay');
+		$this->load->language('extension/payment/bitpay');
 		$this->bitpay = new Bitpay($registry);
 	}
 
