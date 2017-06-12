@@ -1,9 +1,9 @@
 # Using BitPay for OpenCart
 ## Prerequisites
-Last Cart Version Tested: 2.0.1.1
+Last Cart Version Tested: 2.3.0.2
 
 You must have a BitPay merchant account to use this library.  It's free to [sign-up for a BitPay merchant account](https://bitpay.com/start).
-You can also test this plugin with a test BitPay merchant account available at [https://test.bitpay.com](https://test.bitpay.com).  Test accounts are approved immediately and use transactions on the Bitcoin Testnet (Testnet3).
+You can also test this plugin with a test BitPay merchant account. For more information about setting up a test BitPay merchant account & a testnet bitcoin wallet, please see https://bitpay.com/docs/testing
 
 ## Getting Started
 Go to the [latest release](https://github.com/bitpay/opencart-plugin/releases/latest) and download the file called `bitpay-opencart.ocmod.zip`
