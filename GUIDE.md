@@ -8,15 +8,20 @@ You can also test this plugin with a test BitPay merchant account. For more info
 ## Getting Started
 Go to the [latest release](https://github.com/bitpay/opencart-plugin/releases/latest) and download the file called `bitpay-opencart.ocmod.zip`
 
+Note: if you're running an older version of OpenCart (e.g. v2.2), please select the plugin version that's applicable to your OpenCart version.
+
 
 ## Install
 ### Via Extension Installer
 In your OpenCart store's administration section, go to Extensions > Extenstion Installer
-Upload `bitpay-opencart.ocmod.zip` *Note: you have to setup the FTP settings in the Store settings to use the Extension Installer
+Upload `bitpay-opencart.ocmod.zip`
+
+*Note: you have to setup the FTP settings in the Store settings to use the Extension Installer
 Click 'Continue'
 
 ### Via FTP
-Upload all files in the `upload` directory in `bitpay-opencart.ocmod.zip` to your OpenCart store's installation directory.
+Upload all directories and files in `bitpay-opencart.ocmod.zip` to your OpenCart store's root directory.
+Note that older versions of the plugin (e.g. v2.01 for OpenCart v2.2) contain all files in the `upload` directory.
 
 ## Setup
 ### Install the Payment Extension
