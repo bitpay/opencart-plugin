@@ -13,11 +13,13 @@ Note: if you're running an older version of OpenCart (e.g. v2.2), please select 
 
 ## Install
 ### Via Extension Installer
-In your OpenCart store's administration section, go to Extensions > Extenstion Installer
+In your OpenCart store's administration section, go to Extensions > Extension Installer
+
 Upload `bitpay-opencart.ocmod.zip`
 
-*Note: you have to setup the FTP settings in the Store settings to use the Extension Installer
-Click 'Continue'
+OpenCart needs a working FTP server to install files. If the progress bar hangs half way, it probably means that your OpenCart FTP settings are incorrect. You can configure the FTP credentials of your server under System -> Settings -> FTP
+
+After the installation indicates it's successful, you can continue with the setup.
 
 ### Via FTP
 Upload all directories and files in `bitpay-opencart.ocmod.zip` to your OpenCart store's root directory.
@@ -26,13 +28,13 @@ Note that older versions of the plugin (e.g. v2.01 for OpenCart v2.2) contain al
 ## Setup
 ### Install the Payment Extension
 Go to Extensions > Payments.
-Find the BitPay payment extension and click the install button.  The page will refresh, you'll see a success message, and the install button will turn into a red uninstall button.
+Find the BitPay payment extension and click the green install button. The page will refresh, you'll see a success message, and the install button will turn into a red uninstall button.
 Click on the edit button.  You are now at the BitPay plugin's configuration screen.
 
 ### Connect to BitPay
 For live transactions, just press the Connect to BitPay button.  For test transactions, press the drop down button attached to the Connect to Bitpay button and select testnet.
 You will be redirected to your BitPay merchant account and asked to approve a token which connects your store to BitPay's API.
-Upon pressing Approve, you will be redirected to BitPay plugin's configuration screen.
+After pressing Approve, please go back to the BitPay/OpenCart plugin configuration screen.
 
 Configure the settings that work best for you.  Each setting has a tooltip that can help explain what it does.
 Set the status setting to enabled and click save at the top right of the page.
