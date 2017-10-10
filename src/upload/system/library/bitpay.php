@@ -104,11 +104,11 @@ class Bitpay {
 			}
 		} catch (\UnexpectedValueException $e) {
 			$this->log('error', $this->language->get('log_connection_key'));
-			$this->log('error', 'Exception message = '.$e.getMessage());
+			$this->log('error', 'Exception message = '.$e->getMessage());
 			// Do not mark the plugin as disconnected, since this is very likely a temporarily network failure.
 			return;
 		} catch (\Exception $e) {
-			$this->log('info', 'No tokens could be found. Exception = '.$e.getMessage());
+			$this->log('info', 'No tokens could be found. Exception = '.$e->getMessage());
 			// An exception is raised when no tokens can be found
 			// This is fine and expected
 		}
