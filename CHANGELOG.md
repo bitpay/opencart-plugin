@@ -2,6 +2,13 @@
 
 All Notable changes to `opencart-plugin` will be documented in this file
 
+## [2.2] - 2017-10-10
+### Added
+- Added logging and a fix for disconnecting plugin
+
+### Changed
+- Using current BitPay PHP library in composer.json
+
 ## [2.1.0] - 2017-06-12
 ### Added
 - support for 2.3 version of OpenCart

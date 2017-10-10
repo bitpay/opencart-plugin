@@ -6,7 +6,7 @@
 class Bitpay {
 
 	/** @var int $version */
-	public $version = '2.0.0';
+	public $version = '2.2';
 
 	/** @var Registry $registry */
 	private $registry;

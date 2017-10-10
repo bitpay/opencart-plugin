@@ -1,7 +1,7 @@
 {
     "name": "bitpay/opencart-plugin",
     "description": "BitPay Payment Method for OpenCart",
-    "version": "0.0.1",
+    "version": "2.2",
     "type": "opencart-extension",
     "keywords": ["bitcoin", "bitpay", "opencart", "payment", "btc", "xbt"],
     "homepage": "https://github.com/bitpay/opencart-plugin",
@@ -36,7 +36,7 @@
     ],
     "require": {
         "php" : ">=5.4.0",
-        "bitpay/php-client": "dev-master#9338b27fbc7919e3df32caacf0591525c74c58b8"
+        "bitpay/php-client": "~2.2"
     },
     "require-dev": {
         "phpunit/phpunit" : "4.*",
