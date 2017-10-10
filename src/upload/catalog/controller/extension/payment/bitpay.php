@@ -238,6 +238,7 @@ class ControllerExtensionPaymentBitpay extends Controller {
 	 */
 	public function callback() {
 		$this->load->model('checkout/order');
+		$this->log('info', 'IPN handler called');
 
 		$post = file_get_contents("php://input");
 		if (empty($post)) {
@@ -272,8 +273,10 @@ class ControllerExtensionPaymentBitpay extends Controller {
 		} elseif (true === strpos($json['url'], 'https://bitpay.com')) {
 			$network = 'livenet';
 		}
+		$this->log('info', 'Fetching status of invoice '.$json['id']);
 
 		$invoice = $this->bitpay->getInvoice($json['id'], $network);
+		$this->log('info', 'Invoice status = '.$invoice->getStatus());
 
 		switch ($invoice->getStatus()) {
 			case 'paid':
@@ -289,6 +292,7 @@ class ControllerExtensionPaymentBitpay extends Controller {
 				$order_message = $this->language->get('text_progress_complete');
 				break;
 			default:
+				$this->log('info', 'Status is not paid/confirmed/complete. Redirecting to checkout/checkout');
 				$this->response->redirect($this->url->link('checkout/checkout'));
 				return;
 		}

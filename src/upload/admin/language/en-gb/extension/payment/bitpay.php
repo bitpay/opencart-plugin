@@ -108,3 +108,5 @@ $_['log_public_key_found']       = 'Public key found. Decrypting and unserializi
 $_['log_public_key_wrong_type']  = 'The public key is of the wrong type.  Received %s';
 $_['log_public_key_regenerate']  = 'Attempting to regenerate public key...';
 $_['log_regenerate_success']     = 'Public key was corrupt. Regenerated it from private key';
+$_['log_connection_key']         = 'Could not retrieve tokens from BitPay.';
+

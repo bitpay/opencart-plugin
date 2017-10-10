@@ -89,6 +89,7 @@ class Bitpay {
 	 */
 	public function checkConnection() {
 		$connection_token = $this->setting('token');
+		$this->log('info', 'Looking for matching token = ' . $connection_token);
 
 		try {
 			$client = $this->getClient();
@@ -103,13 +104,19 @@ class Bitpay {
 			}
 		} catch (\UnexpectedValueException $e) {
 			$this->log('error', $this->language->get('log_connection_key'));
+			$this->log('error', 'Exception message = '.$e.getMessage());
+			// Do not mark the plugin as disconnected, since this is very likely a temporarily network failure.
+			return;
 		} catch (\Exception $e) {
+			$this->log('info', 'No tokens could be found. Exception = '.$e.getMessage());
 			// An exception is raised when no tokens can be found
 			// This is fine and expected
 		}
 
+		$this->log('info', 'Could not find matching token.');
 		// Disconnect if token doesn't exist anymore
 		if ($this->setting('connection') === 'connected') {
+			$this->log('info', 'Marking plugin as disconnected.');
 			$this->setting('connection', 'disconnected');
 			$this->setting('token', null);
 			$this->setting('network', null);
@@ -123,6 +130,7 @@ class Bitpay {
 	 */
 	public function generateId() {
 		// Generate new keys
+		$this->log('info', 'Generating new keys.');
 		$private_key = new Bitpay\PrivateKey();
 		$private_key->generate();
 		$public_key = $private_key->getPublicKey();
