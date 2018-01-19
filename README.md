@@ -1,15 +1,10 @@
-# Notice
-
-This is a Community-supported project.
-
-If you are interested in becoming a maintainer of this project, please contact us at integrations@bitpay.com. Developers at BitPay will attempt to work along the new maintainers to ensure the project remains viable for the foreseeable future.
-
 # BitPay for OpenCart
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://img.shields.io/travis/bitpay/opencart-plugin/master.svg?style=flat-square)](https://travis-ci.org/bitpay/opencart-plugin)
 
 ## Last Cart Version Tested: 2.3.0.2
+If you have OpenCart v3, please go to https://github.com/bitpay/opencart3-plugin/releases
 
 ## Installation
 
