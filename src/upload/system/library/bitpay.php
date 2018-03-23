@@ -23,11 +23,18 @@ class Bitpay {
 
 		// Load up the BitPay library
 		$autoloader = __DIR__ . '/Bitpay/Autoloader.php';
-		if (true === file_exists($autoloader) &&
-			true === is_readable($autoloader))
+                $autoloader_vqmod = dirname(dirname(__DIR__)).'/system/library/Bitpay/Autoloader.php';
+                
+		if (true === file_exists($autoloader) && true === is_readable($autoloader))
 		{
 			require_once $autoloader;
 			\Bitpay\Autoloader::register();
+                }
+                elseif(true === file_exists($autoloader_vqmod) && true === is_readable($autoloader_vqmod))        
+                {
+                        require_once $autoloader_vqmod;
+			\Bitpay\Autoloader::register();
+                    
 		} else {
 			// OpenCart uses a custom error handler for reporting instead of using exceptions
 			// Which is why an error is triggered instead of an exception being thrown
