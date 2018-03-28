@@ -2,6 +2,11 @@
 
 All Notable changes to `opencart-plugin` will be documented in this file
 
+## [2.2.1] - 2018-03-28
+### Fixed
+- Fixed issues with VqMod (#55)
+
+
 ## [2.2] - 2017-10-10
 ### Added
 - Added logging and a fix for disconnecting plugin
